@@ -262,14 +262,19 @@ textarea {
   min-height: 100svh;
   max-height: 1080px;
   padding: clamp(118px, 12vh, 140px) var(--shell-gutter) clamp(42px, 6vh, 62px);
-  overflow: hidden;
+  isolation: isolate;
+  overflow: visible;
 }
 
 .hero-bg {
   position: absolute;
-  inset: 0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
   z-index: -1;
+  width: 100vw;
   overflow: hidden;
+  transform: translateX(-50%);
   pointer-events: none;
   contain: paint;
 }
