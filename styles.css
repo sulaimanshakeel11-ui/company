@@ -14,7 +14,7 @@
   --radius-xl: 34px;
   --radius-lg: 24px;
   --radius-md: 16px;
-  --container: min(1296px, calc(100vw - 48px));
+  --container: clamp(1152px, calc(100vw - 96px), 1800px);
   --ease: cubic-bezier(0.12, 0.23, 0.5, 1);
 }
 
