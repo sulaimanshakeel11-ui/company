@@ -14,7 +14,7 @@
   --radius-xl: 34px;
   --radius-lg: 24px;
   --radius-md: 16px;
-  --container: 100vw;
+  --container: min(100%, 1920px);
   --shell-gutter: clamp(52px, 3.75vw, 72px);
   --ease: cubic-bezier(0.12, 0.23, 0.5, 1);
 }
@@ -259,8 +259,9 @@ textarea {
   grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
   align-items: center;
   gap: 56px;
-  min-height: 920px;
-  padding: 168px var(--shell-gutter) 86px;
+  min-height: 100vh;
+  max-height: 1080px;
+  padding: 150px var(--shell-gutter) 70px;
 }
 
 .hero-bg {
@@ -314,7 +315,7 @@ textarea {
   max-width: 690px;
   margin: 0;
   color: var(--white);
-  font-size: clamp(72px, 8.7vw, 142px);
+  font-size: clamp(72px, 7.45vw, 142px);
   font-weight: 700;
   letter-spacing: 0;
   line-height: 0.9;
