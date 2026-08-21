@@ -8,6 +8,7 @@ const faqItems = document.querySelectorAll(".faq-item");
 const dropdowns = document.querySelectorAll("[data-dropdown]");
 const choiceGroups = document.querySelectorAll("[data-choice-group]");
 const roleGroups = document.querySelectorAll("[data-role-group]");
+const supportsFinePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
 const setHeaderState = () => {
   header?.classList.toggle("is-scrolled", window.scrollY > 24);
@@ -112,28 +113,30 @@ if ("IntersectionObserver" in window) {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 }
 
-projectCards.forEach((card) => {
-  card.addEventListener("pointermove", (event) => {
-    const rect = card.getBoundingClientRect();
-    const x = ((event.clientX - rect.left) / rect.width) * 100;
-    const y = ((event.clientY - rect.top) / rect.height) * 100;
-    card.style.setProperty("--x", `${x}%`);
-    card.style.setProperty("--y", `${y}%`);
-  });
-});
-
-magneticItems.forEach((item) => {
-  item.addEventListener("pointermove", (event) => {
-    const rect = item.getBoundingClientRect();
-    const x = event.clientX - rect.left - rect.width / 2;
-    const y = event.clientY - rect.top - rect.height / 2;
-    item.style.transform = `translate(${x * 0.08}px, ${y * 0.12}px)`;
+if (supportsFinePointer) {
+  projectCards.forEach((card) => {
+    card.addEventListener("pointermove", (event) => {
+      const rect = card.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 100;
+      const y = ((event.clientY - rect.top) / rect.height) * 100;
+      card.style.setProperty("--x", `${x}%`);
+      card.style.setProperty("--y", `${y}%`);
+    });
   });
 
-  item.addEventListener("pointerleave", () => {
-    item.style.transform = "";
+  magneticItems.forEach((item) => {
+    item.addEventListener("pointermove", (event) => {
+      const rect = item.getBoundingClientRect();
+      const x = event.clientX - rect.left - rect.width / 2;
+      const y = event.clientY - rect.top - rect.height / 2;
+      item.style.transform = `translate(${x * 0.08}px, ${y * 0.12}px)`;
+    });
+
+    item.addEventListener("pointerleave", () => {
+      item.style.transform = "";
+    });
   });
-});
+}
 
 faqItems.forEach((item) => {
   item.addEventListener("toggle", () => {
