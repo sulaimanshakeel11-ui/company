@@ -1,6 +1,59 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/services/saas-dashboards-digital-products",
+      "destination": "/services/saas-dashboard-development",
+      "permanent": true
+    },
+    {
+      "source": "/services/saas-dashboard",
+      "destination": "/services/saas-dashboard-development",
+      "permanent": true
+    },
+    {
+      "source": "/services/saas-dashboard-development/",
+      "destination": "/services/saas-dashboard-development",
+      "permanent": true
+    },
+    {
+      "source": "/services/web-design-development/",
+      "destination": "/services/web-design-development",
+      "permanent": true
+    },
+    {
+      "source": "/services/",
+      "destination": "/services",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/services",
+      "destination": "/services/index.html"
+    },
+    {
+      "source": "/services/web-design-development",
+      "destination": "/services/web-design-development/index.html"
+    },
+    {
+      "source": "/services/saas-dashboard-development",
+      "destination": "/services/saas-dashboard-development/index.html"
+    },
+    {
+      "source": "/projects/volterra-sneaker-store",
+      "destination": "/projects/volterra-sneaker-store/index.html"
+    },
+    {
+      "source": "/projects/student-lms",
+      "destination": "/projects/student-lms/index.html"
+    },
+    {
+      "source": "/projects/tech-company-website",
+      "destination": "/projects/tech-company-website/index.html"
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",

@@ -14,7 +14,7 @@
   --radius-xl: 34px;
   --radius-lg: 24px;
   --radius-md: 16px;
-  --container: min(calc(100% - 44px), 1460px);
+  --container: min(calc(100vw - clamp(32px, 6vw, 120px)), 1460px);
   --shell-gutter: 0px;
   --ease: cubic-bezier(0.12, 0.23, 0.5, 1);
 }
@@ -31,7 +31,11 @@ html {
 
 body {
   margin: 0;
-  background: var(--black);
+  background:
+    radial-gradient(circle at 8% 8%, rgba(255, 255, 255, 0.08), transparent 24rem),
+    radial-gradient(circle at 92% 6%, rgba(77, 141, 255, 0.12), transparent 30rem),
+    radial-gradient(circle at 82% 40%, rgba(255, 255, 255, 0.045), transparent 24rem),
+    linear-gradient(180deg, #0a0a0a 0, #000 34%, #050505 100%);
   color: var(--text);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   overflow-x: clip;
@@ -59,7 +63,9 @@ textarea {
 
 .page-glow {
   position: fixed;
-  inset: -20% -10% auto;
+  top: -20%;
+  right: 0;
+  left: 0;
   z-index: -2;
   height: 620px;
   background:
@@ -347,7 +353,7 @@ summary:focus-visible {
   max-height: 1080px;
   padding: clamp(118px, 12vh, 140px) var(--shell-gutter) clamp(42px, 6vh, 62px);
   isolation: isolate;
-  overflow: clip;
+  overflow: visible;
 }
 
 .hero-bg {
@@ -677,6 +683,7 @@ summary:focus-visible {
 .process,
 .pricing,
 .testimonials,
+.project-proof,
 .faq,
 .contact {
   padding: 150px 0 0;
@@ -1031,12 +1038,15 @@ summary:focus-visible {
 .projects::before {
   content: "";
   position: absolute;
-  inset: 80px -16vw auto;
+  top: 80px;
+  left: 50%;
   z-index: -1;
+  width: 100vw;
   height: 760px;
   background: url("./assets/template-dot-field.png") center/520px auto no-repeat;
   opacity: 0.18;
   filter: grayscale(1);
+  transform: translateX(-50%);
 }
 
 .project-grid {
@@ -1297,6 +1307,19 @@ summary:focus-visible {
   color: var(--white);
   font-size: 22px;
   line-height: 1.35;
+}
+
+.proof-card span {
+  display: block;
+  margin-bottom: 22px;
+  color: var(--muted-2);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.proof-card p {
+  margin: 0;
 }
 
 .faq-list {
@@ -2381,6 +2404,118 @@ summary:focus-visible {
   color: var(--white);
 }
 
+.case-page {
+  overflow: hidden;
+}
+
+.case-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(360px, 0.9fr);
+  align-items: center;
+  gap: clamp(34px, 4vw, 72px);
+  min-height: min(920px, 100svh);
+  padding: clamp(136px, 15vh, 174px) var(--shell-gutter) clamp(72px, 9vh, 112px);
+  isolation: isolate;
+  overflow: clip;
+}
+
+.case-hero-copy {
+  max-width: 760px;
+}
+
+.case-hero h1 {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(58px, 5.7vw, 104px);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 0.92;
+}
+
+.case-hero-image {
+  position: relative;
+  min-height: 520px;
+  border: 1px solid var(--line);
+  border-radius: 34px;
+  background: #090909;
+  box-shadow: inset 0.5px 0.5px 0 rgba(255, 255, 255, 0.2), 0 46px 120px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  transform: perspective(900px) rotateY(-5deg) rotateX(2deg);
+}
+
+.case-hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 48%, rgba(0, 0, 0, 0.62)),
+    radial-gradient(circle at 50% 28%, rgba(255, 255, 255, 0.18), transparent 34%);
+  pointer-events: none;
+}
+
+.case-hero-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  object-fit: cover;
+  filter: saturate(0.58) contrast(1.12) brightness(0.86);
+  transform: scale(1.02);
+}
+
+.case-summary,
+.case-details {
+  padding-top: 128px;
+}
+
+.case-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.case-meta article {
+  min-height: 164px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.026));
+  box-shadow: inset 0.5px 0.5px 0 rgba(255, 255, 255, 0.17);
+}
+
+.case-meta span {
+  display: block;
+  margin-bottom: 42px;
+  color: var(--muted-2);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.case-meta strong {
+  display: block;
+  color: var(--white);
+  font-size: clamp(22px, 2.2vw, 34px);
+  line-height: 1.08;
+}
+
+.error-page .case-hero {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.error-code {
+  display: inline-flex;
+  width: max-content;
+  margin-bottom: 22px;
+  padding: 8px 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.045);
+  font-size: 13px;
+  font-weight: 800;
+}
+
 .reveal {
   opacity: 1;
   transform: none;
@@ -2438,7 +2573,7 @@ summary:focus-visible {
 
 @media (max-width: 1180px) {
   :root {
-    --container: min(100vw - 36px, 980px);
+    --container: min(100vw - 48px, 980px);
     --shell-gutter: 0px;
   }
 
@@ -2523,7 +2658,7 @@ summary:focus-visible {
 
 @media (max-width: 860px) {
   :root {
-    --container: min(100vw - 28px, 680px);
+    --container: min(100vw - 36px, 680px);
     --shell-gutter: 0px;
   }
 
@@ -2602,6 +2737,7 @@ summary:focus-visible {
   .process,
   .pricing,
   .testimonials,
+  .project-proof,
   .faq,
   .contact {
     padding-top: 104px;
@@ -2681,7 +2817,7 @@ summary:focus-visible {
 
 @media (max-width: 520px) {
   :root {
-    --container: calc(100vw - 24px);
+    --container: calc(100vw - 28px);
     --shell-gutter: 0px;
   }
 
@@ -2716,12 +2852,17 @@ summary:focus-visible {
   }
 
   .hero-visual {
-    min-height: 330px;
+    min-height: auto;
   }
 
   .preview-shell {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
     padding: 14px;
     border-radius: 24px;
+    transform: none;
   }
 
   .preview-grid {
@@ -2817,13 +2958,15 @@ summary:focus-visible {
 }
 
 @media (max-width: 1180px) {
-  .service-hero {
+  .service-hero,
+  .case-hero {
     grid-template-columns: 1fr;
     min-height: auto;
     padding-top: 150px;
   }
 
-  .service-hero-copy {
+  .service-hero-copy,
+  .case-hero-copy {
     max-width: 920px;
   }
 
@@ -2867,6 +3010,19 @@ summary:focus-visible {
     aspect-ratio: 1.45;
     min-height: 360px;
   }
+
+  .case-hero-image {
+    min-height: 430px;
+    transform: none;
+  }
+
+  .case-hero-image img {
+    min-height: 430px;
+  }
+
+  .case-meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 860px) {
@@ -2874,13 +3030,15 @@ summary:focus-visible {
     max-height: 760px;
   }
 
-  .service-hero {
+  .service-hero,
+  .case-hero {
     padding-top: 128px;
     padding-bottom: 72px;
     gap: 34px;
   }
 
-  .service-hero h1 {
+  .service-hero h1,
+  .case-hero h1 {
     font-size: clamp(44px, 12vw, 72px);
   }
 
@@ -2909,6 +3067,8 @@ summary:focus-visible {
   .role-preview,
   .workflow-section,
   .case-study-panel,
+  .case-summary,
+  .case-details,
   .good-fit,
   .related-service {
     padding-top: 104px;
@@ -2937,6 +3097,7 @@ summary:focus-visible {
   .screen-row,
   .workflow-list,
   .case-study-grid,
+  .case-meta,
   .role-dashboard,
   .five-steps,
   .two-projects,
@@ -2981,15 +3142,23 @@ summary:focus-visible {
     min-height: auto;
     aspect-ratio: 1.12;
   }
+
+  .case-hero-image,
+  .case-hero-image img {
+    min-height: 360px;
+  }
 }
 
 @media (max-width: 520px) {
-  .service-hero {
+  .service-hero,
+  .case-hero {
     padding-top: 118px;
   }
 
-  .service-hero h1 {
+  .service-hero h1,
+  .case-hero h1 {
     font-size: clamp(38px, 13.5vw, 58px);
+    line-height: 0.98;
   }
 
   .service-hero .hero-orb {
@@ -3008,6 +3177,12 @@ summary:focus-visible {
   .responsive-visual,
   .dashboard-visual {
     min-height: 350px;
+  }
+
+  .case-hero-image,
+  .case-hero-image img {
+    min-height: 300px;
+    border-radius: 24px;
   }
 
   .system-browser,
@@ -3051,6 +3226,7 @@ summary:focus-visible {
   .capability-card,
   .choice-card,
   .editorial-panel,
+  .case-meta article,
   .case-study-card {
     border-radius: 22px;
   }

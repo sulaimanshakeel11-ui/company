@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Student LMS case study by Nova Tech, featuring a role-based education dashboard with attendance, exams, fees, assignments, files, and Supabase-ready workflows."
+    />
+    <link rel="canonical" href="https://www.novatechpk.com/projects/student-lms" />
+    <meta property="og:title" content="Student LMS Case Study | Nova Tech" />
+    <meta
+      property="og:description"
+      content="A SaaS dashboard and education platform case study with role-based student and teacher workflows."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.novatechpk.com/projects/student-lms" />
+    <meta property="og:image" content="https://www.novatechpk.com/assets/student-lms.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Student LMS Case Study | Nova Tech</title>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23000'/%3E%3Cpath d='M17 45V19h7.5l15 17.3V19H47v26h-7.1L24.5 27.2V45H17Z' fill='%23fff'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="../../styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "@id": "https://www.novatechpk.com/projects/student-lms#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.novatechpk.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://www.novatechpk.com/#projects"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Student LMS",
+            "item": "https://www.novatechpk.com/projects/student-lms"
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://www.novatechpk.com/#organization",
+            "name": "Nova Tech",
+            "url": "https://www.novatechpk.com/",
+            "email": "info@novatechpk.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Karachi",
+              "addressCountry": "PK"
+            },
+            "sameAs": ["https://www.behance.net/sulaimanshakeel"]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.novatechpk.com/#website",
+            "name": "Nova Tech",
+            "url": "https://www.novatechpk.com/",
+            "publisher": {
+              "@id": "https://www.novatechpk.com/#organization"
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div class="page-glow" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="Nova Tech home"><span class="brand-mark">N</span><span>Nova Tech</span></a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <div class="nav-dropdown" data-dropdown>
+            <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="services-menu" data-dropdown-toggle>
+              Services <span aria-hidden="true">v</span>
+            </button>
+            <div class="nav-dropdown-menu" id="services-menu" data-dropdown-menu>
+              <a href="/services">All Services</a>
+              <a href="/services/web-design-development">Website Design & Development</a>
+              <a href="/services/saas-dashboard-development">SaaS Dashboards & Digital Products</a>
+              <a href="/services#recruitment">Recruitment & Talent Sourcing</a>
+            </div>
+          </div>
+          <a href="/#about">About</a>
+          <a href="/#projects">Projects</a>
+          <a href="/#process">Process</a>
+          <a href="/#pricing">Pricing</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+        <a class="header-cta magnetic" href="mailto:info@novatechpk.com?subject=Start%20a%20Project">Start a Project</a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-toggle><span></span><span></span></button>
+      </div>
+      <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+        <a href="/services">All Services</a>
+        <a href="/services/web-design-development">Website Design & Development</a>
+        <a href="/services/saas-dashboard-development">SaaS Dashboards & Digital Products</a>
+        <a href="/services#recruitment">Recruitment & Talent Sourcing</a>
+        <a href="/#about">About</a>
+        <a href="/#projects">Projects</a>
+        <a href="/#process">Process</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="internal-page case-page">
+      <section class="case-hero section-shell">
+        <div class="hero-bg" aria-hidden="true">
+          <img src="../../assets/nova-hero-orb.svg" alt="" class="hero-orb" />
+          <img src="../../assets/template-wave-field.png" alt="" class="hero-wave" />
+        </div>
+        <div class="case-hero-copy">
+          <nav class="breadcrumbs reveal" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/#projects">Projects</a><span>/</span><span>Student LMS</span></nav>
+          <p class="eyebrow reveal">Case Study</p>
+          <h1 class="reveal stagger-1">Student LMS</h1>
+          <p class="hero-text reveal stagger-2">
+            A role-based learning management system created for education workflows. The product brings attendance,
+            exams, fee status, assignments, counselling, timetables, file sharing, and student or teacher dashboards into
+            a structured interface that can support Supabase-ready app architecture.
+          </p>
+          <div class="hero-actions reveal stagger-3">
+            <a class="button button-primary magnetic" href="https://student-lms-alpha.vercel.app/dashboard" target="_blank" rel="noopener">View Live Project <span aria-hidden="true">-></span></a>
+            <a class="button button-secondary magnetic" href="mailto:info@novatechpk.com?subject=SaaS%20Dashboard%20Project">Discuss a Dashboard <span aria-hidden="true">-></span></a>
+          </div>
+        </div>
+        <div class="case-hero-image reveal stagger-2">
+          <img src="../../assets/student-lms.png" alt="Student LMS dashboard preview" />
+        </div>
+      </section>
+
+      <section class="section-shell case-summary">
+        <div class="case-meta reveal">
+          <article><span>Project Type</span><strong>SaaS Dashboard</strong></article>
+          <article><span>Primary Flow</span><strong>Role-Based Education UX</strong></article>
+          <article><span>Live URL</span><strong>student-lms-alpha.vercel.app</strong></article>
+        </div>
+      </section>
+
+      <section class="section-shell case-details">
+        <div class="section-heading split">
+          <div>
+            <div class="section-kicker reveal">Project Direction</div>
+            <h2 class="reveal stagger-1">A dashboard system for repeated academic tasks.</h2>
+          </div>
+          <p class="reveal stagger-2">
+            The interface was shaped around the tasks students, teachers, and school staff need to revisit often:
+            checking status, reviewing schedules, submitting work, finding files, and understanding academic progress.
+          </p>
+        </div>
+        <div class="capability-grid">
+          <article class="capability-card reveal"><h3>Role-Based Views</h3><p>Student and teacher dashboards with navigation and content grouped around each role.</p></article>
+          <article class="capability-card reveal stagger-1"><h3>Academic Workflows</h3><p>Attendance, exams, fees, assignments, counselling, timetable, and file-sharing areas.</p></article>
+          <article class="capability-card reveal stagger-2"><h3>Dashboard UI System</h3><p>Cards, lists, tables, status labels, and responsive components arranged for clarity.</p></article>
+        </div>
+      </section>
+
+      <section class="section-shell related-service">
+        <a class="related-panel reveal" href="/services/saas-dashboard-development">
+          <span>Need a dashboard, portal, or internal system with clear product flows?</span>
+          <strong>Explore SaaS Dashboard Development <span aria-hidden="true">-></span></strong>
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-wordmark">Nova Tech</div>
+      <div class="footer-bottom">
+        <nav aria-label="Footer navigation">
+          <a href="/services">Services</a>
+          <a href="/services/web-design-development">Website Design</a>
+          <a href="/services/saas-dashboard-development">SaaS Dashboards</a>
+          <a href="/services#recruitment">Recruitment</a>
+          <a href="/#projects">Projects</a>
+          <a href="/#process">Process</a>
+          <a href="/#pricing">Pricing</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+        <nav aria-label="Social links">
+          <a href="https://www.behance.net/sulaimanshakeel" target="_blank" rel="noopener">Behance</a>
+          <a href="mailto:info@novatechpk.com">Email</a>
+        </nav>
+        <p>&copy; 2026 Nova Tech. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+  </body>
+</html>
+
+

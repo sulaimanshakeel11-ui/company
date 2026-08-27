@@ -7,13 +7,16 @@
       name="description"
       content="Nova Tech is a modern web design, digital product, and talent sourcing studio building websites, SaaS dashboards, e-commerce stores, AI chatbot integrations, and focused recruitment support."
     />
+    <link rel="canonical" href="https://www.novatechpk.com/" />
     <meta property="og:title" content="Nova Tech - Web Design and Development Studio" />
     <meta
       property="og:description"
       content="Polished websites, SaaS dashboards, e-commerce stores, digital experiences, and focused recruitment support built with clarity, speed, and detail."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="./assets/tech-website.png" />
+    <meta property="og:url" content="https://www.novatechpk.com/" />
+    <meta property="og:image" content="https://www.novatechpk.com/assets/tech-website.png" />
+    <meta name="twitter:card" content="summary_large_image" />
     <title>Nova Tech - Web Design and Development Studio</title>
     <script>
       document.documentElement.classList.add("js");
@@ -23,13 +26,42 @@
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23000'/%3E%3Cpath d='M17 45V19h7.5l15 17.3V19H47v26h-7.1L24.5 27.2V45H17Z' fill='%23fff'/%3E%3C/svg%3E"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://www.novatechpk.com/#organization",
+            "name": "Nova Tech",
+            "url": "https://www.novatechpk.com/",
+            "email": "info@novatechpk.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Karachi",
+              "addressCountry": "PK"
+            },
+            "sameAs": ["https://www.behance.net/sulaimanshakeel"]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.novatechpk.com/#website",
+            "name": "Nova Tech",
+            "url": "https://www.novatechpk.com/",
+            "publisher": {
+              "@id": "https://www.novatechpk.com/#organization"
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div class="page-glow" aria-hidden="true"></div>
 
     <header class="site-header" data-header>
       <div class="header-inner">
-        <a class="brand" href="./" aria-label="Nova Tech home">
+        <a class="brand" href="/" aria-label="Nova Tech home">
           <span class="brand-mark">N</span>
           <span>Nova Tech</span>
         </a>
@@ -41,10 +73,10 @@
               <span aria-hidden="true">v</span>
             </button>
             <div class="nav-dropdown-menu" id="services-menu" data-dropdown-menu>
-              <a href="./services/">All Services</a>
-              <a href="./services/web-design-development/">Website Design & Development</a>
-              <a href="./services/saas-dashboard-development/">SaaS Dashboards & Digital Products</a>
-              <a href="./services/#recruitment">Recruitment & Talent Sourcing</a>
+              <a href="/services">All Services</a>
+              <a href="/services/web-design-development">Website Design & Development</a>
+              <a href="/services/saas-dashboard-development">SaaS Dashboards & Digital Products</a>
+              <a href="/services#recruitment">Recruitment & Talent Sourcing</a>
             </div>
           </div>
           <a href="#about">About</a>
@@ -54,7 +86,7 @@
           <a href="#contact">Contact</a>
         </nav>
 
-        <a class="header-cta magnetic" href="mailto:hello@novatech.studio?subject=Start%20a%20Project">Start a Project</a>
+        <a class="header-cta magnetic" href="mailto:info@novatechpk.com?subject=Start%20a%20Project">Start a Project</a>
 
         <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-toggle>
           <span></span>
@@ -63,10 +95,10 @@
       </div>
 
       <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
-        <a href="./services/">Services</a>
-        <a href="./services/web-design-development/">Website Design & Development</a>
-        <a href="./services/saas-dashboard-development/">SaaS Dashboards & Digital Products</a>
-        <a href="./services/#recruitment">Recruitment & Talent Sourcing</a>
+        <a href="/services">Services</a>
+        <a href="/services/web-design-development">Website Design & Development</a>
+        <a href="/services/saas-dashboard-development">SaaS Dashboards & Digital Products</a>
+        <a href="/services#recruitment">Recruitment & Talent Sourcing</a>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#process">Process</a>
@@ -94,7 +126,7 @@
             businesses launch faster, look sharper online, and find relevant people.
           </p>
           <div class="hero-actions reveal stagger-3">
-            <a class="button button-primary magnetic" href="mailto:hello@novatech.studio?subject=Start%20a%20Project">
+            <a class="button button-primary magnetic" href="mailto:info@novatechpk.com?subject=Start%20a%20Project">
               Start a Project
               <span aria-hidden="true">-></span>
             </a>
@@ -169,48 +201,48 @@
       <section class="section-shell services" id="services">
         <div class="section-kicker reveal">Services</div>
         <div class="section-heading split">
-          <h2 class="reveal"><a class="heading-link" href="./services/">What We Do</a></h2>
+          <h2 class="reveal"><a class="heading-link" href="/services">What We Do</a></h2>
           <p class="reveal stagger-1">We design and build modern digital products from idea to launch.</p>
         </div>
 
         <div class="service-grid">
-          <a class="service-card service-link reveal" href="./services/web-design-development/">
+          <a class="service-card service-link reveal" href="/services/web-design-development">
             <span>/01</span>
             <h3>Website Design & Development</h3>
             <p>High-performing responsive websites built with clean structure, fast loading, and polished visual detail.</p>
             <strong>Explore service <span aria-hidden="true">-></span></strong>
           </a>
-          <a class="service-card service-link reveal stagger-1" href="./services/web-design-development/">
+          <a class="service-card service-link reveal stagger-1" href="/services/web-design-development">
             <span>/02</span>
             <h3>UI/UX Design</h3>
             <p>Clean interfaces, clear user flows, dashboards, and product screens designed for usability.</p>
             <strong>Explore service <span aria-hidden="true">-></span></strong>
           </a>
-          <a class="service-card service-link reveal stagger-2" href="./services/saas-dashboard-development/">
+          <a class="service-card service-link reveal stagger-2" href="/services/saas-dashboard-development">
             <span>/03</span>
             <h3>SaaS Dashboard Development</h3>
             <p>Scalable dashboards and internal systems for education, inventory, business tools, and portals.</p>
             <strong>Explore service <span aria-hidden="true">-></span></strong>
           </a>
-          <a class="service-card service-link reveal" href="./services/">
+          <a class="service-card service-link reveal" href="/services">
             <span>/04</span>
             <h3>E-Commerce Stores</h3>
             <p>Modern storefronts with product pages, cart, checkout, and order confirmation flows.</p>
             <strong>Explore service <span aria-hidden="true">-></span></strong>
           </a>
-          <a class="service-card service-link reveal stagger-1" href="./services/web-design-development/">
+          <a class="service-card service-link reveal stagger-1" href="/services/web-design-development">
             <span>/05</span>
             <h3>Landing Pages</h3>
             <p>Focused pages designed to explain value quickly and convert visitors into leads.</p>
             <strong>Explore service <span aria-hidden="true">-></span></strong>
           </a>
-          <a class="service-card service-link reveal stagger-2" href="./services/">
+          <a class="service-card service-link reveal stagger-2" href="/services">
             <span>/06</span>
             <h3>AI Chatbots & Automation</h3>
             <p>Smart support and automation flows that improve customer experience and reduce manual work.</p>
             <strong>Explore service <span aria-hidden="true">-></span></strong>
           </a>
-          <a class="service-card service-link recruitment-card reveal" href="./services/#recruitment">
+          <a class="service-card service-link recruitment-card reveal" href="/services#recruitment">
             <span>/07</span>
             <h3>Recruitment & Talent Sourcing</h3>
             <p>
@@ -247,7 +279,7 @@
               We combine structured candidate sourcing with practical screening to help businesses spend less time
               searching and more time speaking with relevant people.
             </p>
-            <a class="button button-primary magnetic" href="mailto:hello@novatech.studio?subject=Recruitment%20%2F%20Talent%20Sourcing">
+            <a class="button button-primary magnetic" href="mailto:info@novatechpk.com?subject=Recruitment%20%2F%20Talent%20Sourcing">
               Discuss Your Hiring Needs
               <span aria-hidden="true">-></span>
             </a>
@@ -425,7 +457,7 @@
               <li>Contact CTA</li>
               <li>Deployment support</li>
             </ul>
-            <a class="button button-secondary magnetic" href="mailto:hello@novatech.studio?subject=Starter%20Website">
+            <a class="button button-secondary magnetic" href="mailto:info@novatechpk.com?subject=Starter%20Website">
               Get Started
             </a>
           </article>
@@ -442,7 +474,7 @@
               <li>Project/contact sections</li>
               <li>Mobile optimization</li>
             </ul>
-            <a class="button button-primary magnetic" href="mailto:hello@novatech.studio?subject=Growth%20Website">
+            <a class="button button-primary magnetic" href="mailto:info@novatechpk.com?subject=Growth%20Website">
               Get Started
             </a>
           </article>
@@ -458,34 +490,37 @@
               <li>Database-ready structure</li>
               <li>Admin/user views</li>
             </ul>
-            <a class="button button-secondary magnetic" href="mailto:hello@novatech.studio?subject=Product%20Build">
+            <a class="button button-secondary magnetic" href="mailto:info@novatechpk.com?subject=Product%20Build">
               Get Started
             </a>
           </article>
         </div>
       </section>
 
-      <section class="section-shell testimonials" id="testimonials">
+      <section class="section-shell project-proof" id="proof">
         <div class="section-heading split">
           <div>
-            <div class="section-kicker reveal">Testimonials</div>
-            <h2 class="reveal stagger-1">Client Words</h2>
+            <div class="section-kicker reveal">Project Proof</div>
+            <h2 class="reveal stagger-1">Built around real working product flows.</h2>
           </div>
-          <p class="reveal stagger-2">Realistic placeholder feedback until new client quotes are ready.</p>
+          <p class="reveal stagger-2">
+            Until verified client testimonials are available, Nova Tech shows factual proof from live projects and the
+            product decisions behind them.
+          </p>
         </div>
 
-        <div class="testimonial-grid">
-          <article class="testimonial-card reveal">
-            <p>"Nova Tech made our website feel clean, modern, and easy to understand."</p>
-            <span>Startup Founder</span>
+        <div class="testimonial-grid proof-grid">
+          <article class="testimonial-card proof-card reveal">
+            <span>Volterra Sneaker Store</span>
+            <p>E-commerce storefront with product discovery, cart, checkout, and order confirmation flow.</p>
           </article>
-          <article class="testimonial-card reveal stagger-1">
-            <p>"The final design looked polished, responsive, and much better than the original idea."</p>
-            <span>Small Business Owner</span>
+          <article class="testimonial-card proof-card reveal stagger-1">
+            <span>Student LMS</span>
+            <p>Role-based education dashboard covering attendance, exams, fees, assignments, files, and user views.</p>
           </article>
-          <article class="testimonial-card reveal stagger-2">
-            <p>"The dashboard approach made complex information feel simple."</p>
-            <span>Product Client</span>
+          <article class="testimonial-card proof-card reveal stagger-2">
+            <span>Tech Company Website</span>
+            <p>Responsive technology landing page with clear service sections and polished visual presentation.</p>
           </article>
         </div>
       </section>
@@ -530,16 +565,16 @@
             <div class="section-kicker">Contact</div>
             <h2>Let&apos;s Talk<br /><em>Your Next Big Idea</em></h2>
             <p>Have a website, app, dashboard, or digital product idea? Let&apos;s turn it into a polished online experience.</p>
-            <a class="button button-primary magnetic" href="mailto:hello@novatech.studio?subject=Start%20a%20Project">
+            <a class="button button-primary magnetic" href="mailto:info@novatechpk.com?subject=Start%20a%20Project">
               Start a Project
               <span aria-hidden="true">-></span>
             </a>
           </div>
 
           <div class="contact-details" aria-label="Nova Tech contact details">
-            <a href="mailto:hello@novatech.studio">
+            <a href="mailto:info@novatechpk.com">
               <span>Email</span>
-              hello@novatech.studio
+              info@novatechpk.com
             </a>
             <a href="https://www.behance.net/sulaimanshakeel" target="_blank" rel="noopener">
               <span>Behance</span>
@@ -562,10 +597,10 @@
       <div class="footer-wordmark">Nova Tech</div>
       <div class="footer-bottom">
         <nav aria-label="Footer navigation">
-          <a href="./services/">Services</a>
-          <a href="./services/web-design-development/">Website Design</a>
-          <a href="./services/saas-dashboard-development/">SaaS Dashboards</a>
-          <a href="./services/#recruitment">Recruitment</a>
+          <a href="/services">Services</a>
+          <a href="/services/web-design-development">Website Design</a>
+          <a href="/services/saas-dashboard-development">SaaS Dashboards</a>
+          <a href="/services#recruitment">Recruitment</a>
           <a href="#projects">Projects</a>
           <a href="#process">Process</a>
           <a href="#pricing">Pricing</a>
@@ -573,9 +608,7 @@
         </nav>
         <nav aria-label="Social links">
           <a href="https://www.behance.net/sulaimanshakeel" target="_blank" rel="noopener">Behance</a>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+          <a href="mailto:info@novatechpk.com">Email</a>
         </nav>
         <p>&copy; 2026 Nova Tech. All rights reserved.</p>
       </div>
@@ -584,3 +617,4 @@
     <script src="./script.js"></script>
   </body>
 </html>
+
